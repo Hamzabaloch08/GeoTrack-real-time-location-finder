@@ -1,0 +1,204 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global font styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2C3E50; /* Dark background for luxury feel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ecf0f1; /* Light text color */
+}
+
+/* Container for centering the button */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Basic Button Styling */
+.tracker-button {
+    background-color: #1abc9c; /* Aqua color for button */
+    color: white;
+    font-size: 18px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 50px; /* Rounded corners for a sleek look */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Hover effect for the button */
+.tracker-button:hover {
+    background-color: #16a085;
+    transform: scale(1.05); /* Slightly increase size for hover effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Click effect for the button */
+.tracker-button:active {
+    background-color: #1abc9c;
+    transform: scale(0.98); /* Slight shrink effect on click */
+}
+
+/* Information Box */
+.info-box {
+    display: none; /* Hidden by default */
+    background: linear-gradient(145deg, #f39c12, #f1c40f); /* Luxurious gold gradient */
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Elegant shadow */
+    color: #34495e; /* Dark text for contrast */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff; /* White color for the header */
+}
+
+.info-box p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Close Button */
+.close-btn {
+    background-color: #e74c3c; /* Red color for close button */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for close button */
+.close-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+/* Focus effect for close button */
+.close-btn:focus {
+    outline: none;
+}
+
+/* Button Hover Glow */
+.tracker-button:hover {
+    box-shadow: 0 0 30px rgba(26, 188, 156, 0.6);
+}
+
+/* Loader styles */
+.loader {
+    display: none; /* Hidden by default */
+    border: 4px solid #f3f3f3; /* Light gray border */
+    border-top: 4px solid #3498db; /* Blue color for the top part */
+    border-radius: 50%; /* Circular loader */
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite; /* Spinning animation */
+    margin: 20px auto; /* Center the loader */
+}
+
+/* Animation for the loader */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Styles */
+
+/* For small screens (Mobile phones) */
+@media (max-width: 600px) {
+    /* Adjust button size */
+    .tracker-button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    /* Adjust info box width */
+    .info-box {
+        width: 90%; /* Full width for mobile */
+        padding: 20px;
+    }
+
+    /* Adjust font sizes */
+    .info-box h2 {
+        font-size: 20px;
+    }
+
+    .info-box p {
+        font-size: 14px;
+    }
+}
+
+/* For medium screens (Tablets) */
+@media (max-width: 1024px) {
+    /* Adjust button size */
+    .tracker-button {
+        font-size: 17px;
+        padding: 12px 26px;
+    }
+
+    /* Adjust info box width */
+    .info-box {
+        width: 80%; /* Adjust width for tablet */
+    }
+
+    /* Adjust font sizes */
+    .info-box h2 {
+        font-size: 22px;
+    }
+
+    .info-box p {
+        font-size: 15px;
+    }
+}
+
+/* For larger screens (Desktop) */
+@media (min-width: 1025px) {
+    /* Adjust button size */
+    .tracker-button {
+        font-size: 18px;
+        padding: 14px 28px;
+    }
+
+    /* Adjust info box width */
+    .info-box {
+        width: 350px; /* Default width for desktop */
+    }
+
+    /* Adjust font sizes */
+    .info-box h2 {
+        font-size: 24px;
+    }
+
+    .info-box p {
+        font-size: 16px;
+    }
+}
