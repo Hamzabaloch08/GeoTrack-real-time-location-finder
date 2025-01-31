@@ -24,12 +24,11 @@ allowLocationButton.addEventListener('click', () => {
   getPosition().then(async (response) => {
     const { coords } = response;
     const { latitude, longitude } = coords;
-
+    let key = '577631871473506132023x46911'
     const location = await fetch(
-      `https://geocode.xyz/${latitude},${longitude}?geoit=json&auth=577631871473506132023x46911`
+      `https://geocode.xyz/${latitude},${longitude}?geoit=json&auth=${key}`
     );
     const locationJSON = await location.json();
-    console.log(locationJSON)
 
     // Hide loader after data is fetched
     loader.style.display = 'none'; 
